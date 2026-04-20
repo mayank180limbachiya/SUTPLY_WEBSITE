@@ -1,401 +1,713 @@
-
-<!DOCTYPE html>
 {% load static %}
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUTPLY | Premium Plywood Solutions | 30+ Years Excellence</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="SUTPLY provides high-quality Gurjun faced plywood with 20+ years of trust. Durable, Borer & Powder free construction materials.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        
-        /* Section Offsets for Navigation */
-        section { scroll-margin-top: 80px; }
-        
-        /* Custom Animations */
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .slide-active { animation: slideIn 0.5s ease-out forwards; }
-        
-        /* Slider dots */
-        .dot.active { background-color: #ef4444; width: 2rem; }
-    </style>
-<!--<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react/": "https://esm.sh/react@^19.2.4/"
-  }
-}
-</script>-->
-</head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
-    <!-- NAVIGATION -->
-    <header id="main-header" class="fixed w-full z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 md:px-8 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#home" class="flex items-center space-x-2">
-                <img class="img-fluid" src="{% static 'img/sutplylogo1.png'%}" style = "height: 50px;" alt="">
-                <!--
-                <div id="logo-box" class="px-3 py-1 border-2 border-white bg-black/20 backdrop-blur-sm text-white font-bold text-xl tracking-tighter transition-all">
-                    SUT<span class="bg-white text-black px-1 ml-1">PLY</span>
-                </div>
-                <span class="text-[8px] align-top text-gray-400 font-bold border border-gray-600 rounded-full px-1">TM</span>
-                -->
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex space-x-8">
-                <a href="#home" class="nav-link font-semibold text-white hover:text-red-500 transition-colors">Home</a>
-                <a href="#about" class="nav-link font-semibold text-white hover:text-red-500 transition-colors">About</a>
-                <a href="#products" class="nav-link font-semibold text-white hover:text-red-500 transition-colors">Products</a>
-                <a href="#features" class="nav-link font-semibold text-white hover:text-red-500 transition-colors">Features</a>
-                <a href="#quote" class="nav-link font-semibold text-white hover:text-red-500 transition-colors">Get Quote</a>
-            </nav>
-
-            <!-- CTA -->
-            <div class="hidden md:block">
-                <a href="#quote" class="bg-red-600 text-white px-6 py-2 rounded font-bold hover:bg-red-700 transition-all shadow-lg flex items-center space-x-2">
-                    <span>QUICK QUOTE</span>
-                    <i class="fas fa-paper-plane text-xs"></i>
-                </a>
-            </div>
-
-            <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white fixed inset-x-0 top-[72px] shadow-2xl border-b border-gray-100 animate-fadeIn">
-            <nav class="flex flex-col p-6 space-y-4">
-                <a href="#home" class="mobile-nav-link text-gray-800 font-bold text-lg border-b pb-2">Home</a>
-                <a href="#about" class="mobile-nav-link text-gray-800 font-bold text-lg border-b pb-2">About</a>
-                <a href="#products" class="mobile-nav-link text-gray-800 font-bold text-lg border-b pb-2">Products</a>
-                <a href="#features" class="mobile-nav-link text-gray-800 font-bold text-lg border-b pb-2">Features</a>
-                <a href="#quote" class="mobile-nav-link text-red-600 font-bold text-lg">Get Quote</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section id="home" class="relative min-h-screen flex items-center pt-16">
-        <div class="absolute inset-0 bg-black/50 z-10"></div>
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&q=80&w=1920')"></div>
-        
-        <div class="container mx-auto px-4 md:px-8 relative z-20 text-white">
-            <div class="max-w-3xl">
-                <div class="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
-                    20+ Years of Excellence
-                </div>
-                <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">
-                    BEAUTIFY YOUR HOME <br />
-                    <span class="text-red-500">WITH SUTPLY</span>
-                </h1>
-                <p class="text-lg md:text-2xl mb-10 text-gray-200 font-medium leading-relaxed">
-                    The Excellent Plywood - Make Interiors Better. Strength & Trust Combined for the projects of your dreams.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#quote" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded font-bold text-lg transition-all text-center shadow-xl">
-                        Free Consultation
-                    </a>
-                    <a href="#features" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-8 py-4 rounded font-bold text-lg transition-all text-center">
-                        Our Specifications
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 relative">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1549194388-f61be84a6e9e?auto=format&fit=crop&q=80&w=1000" alt="SUTPLY Craftsmanship" class="w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-8 rounded-xl shadow-xl hidden md:block">
-                        <div class="text-4xl font-bold">20+</div>
-                        <div class="text-sm font-semibold uppercase tracking-widest">Years of Trust</div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2">
-                    <h2 class="text-red-600 font-bold uppercase tracking-widest text-sm mb-4">Our Legacy</h2>
-                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Trust & Strength Combined</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                        At <strong>SUTPLY</strong>, we believe superior quality plywood is the heart of every great interior. We provide premium solutions that ensure your projects stand the test of time.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-red-600"></i>
-                            <span class="font-bold">Excellent Plywood</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-red-600"></i>
-                            <span class="font-bold">Interior Focused</span>
-                        </div>
-                    </div>
-                    <div class="p-6 border-l-4 border-red-600 bg-gray-50 rounded-r-xl italic text-gray-700">
-                        "Unlock the potential of your projects with Trusty Plywood. We bring the beauty of Gurjun inside your living space."
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCT SLIDER -->
-    <section id="products" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-red-600 font-bold uppercase tracking-widest text-sm mb-4">Showcase</h2>
-                <h3 class="text-3xl md:text-4xl font-bold">Plywood For Every Need</h3>
-            </div>
-
-            <div class="relative max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl bg-black aspect-[16/9] md:aspect-[21/9]">
-                <!-- Slides Container -->
-                <div id="slider" class="relative h-full w-full">
-                    <!-- Slide 1 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10">
-                        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover opacity-60">
-                        <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white max-w-2xl">
-                            <h4 class="text-3xl md:text-5xl font-bold mb-4">Marine Grade</h4>
-                            <p class="text-lg md:text-xl text-gray-200">Perfect for kitchen cabinets and moisture-prone areas.</p>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover opacity-60">
-                        <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white max-w-2xl">
-                            <h4 class="text-3xl md:text-5xl font-bold mb-4">Premium Finish</h4>
-                            <p class="text-lg md:text-xl text-gray-200">100% Gurjun face for flawless architectural results.</p>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0">
-                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover opacity-60">
-                        <div class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white max-w-2xl">
-                            <h4 class="text-3xl md:text-5xl font-bold mb-4">Durable Solutions</h4>
-                            <p class="text-lg md:text-xl text-gray-200">Borer & Powder free sheets for lifetime protection.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slider Nav -->
-                <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 bg-white/20 hover:bg-red-600 rounded-full text-white transition-all"><i class="fas fa-chevron-left"></i></button>
-                <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 bg-white/20 hover:bg-red-600 rounded-full text-white transition-all"><i class="fas fa-chevron-right"></i></button>
-
-                <!-- Dots -->
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
-                    <button onclick="setSlide(0)" class="dot w-3 h-3 bg-white/50 rounded-full active transition-all"></button>
-                    <button onclick="setSlide(1)" class="dot w-3 h-3 bg-white/50 rounded-full transition-all"></button>
-                    <button onclick="setSlide(2)" class="dot w-3 h-3 bg-white/50 rounded-full transition-all"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES SECTION -->
-    <section id="features" class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-red-500 font-bold uppercase tracking-widest text-sm mb-4">Specifications</h2>
-                <h3 class="text-4xl font-bold mb-4">Built To Last Generations</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-red-600 transition-all">
-                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-lg flex items-center justify-center text-2xl mb-6"><i class="fas fa-tree"></i></div>
-                    <h4 class="text-xl font-bold mb-3">100% Gurjun Face</h4>
-                    <p class="text-gray-400">Authentic wood sourcing for premium results.</p>
-                </div>
-                <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-red-600 transition-all">
-                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-lg flex items-center justify-center text-2xl mb-6"><i class="fas fa-shield-virus"></i></div>
-                    <h4 class="text-xl font-bold mb-3">Borer & Powder Free</h4>
-                    <p class="text-gray-400">Advanced chemical treatment for total safety.</p>
-                </div>
-                <div class="p-8 bg-gray-800 rounded-2xl border border-gray-700 hover:border-red-600 transition-all">
-                    <div class="w-14 h-14 bg-red-600/10 text-red-500 rounded-lg flex items-center justify-center text-2xl mb-6"><i class="fas fa-award"></i></div>
-                    <h4 class="text-xl font-bold mb-3">IS: CML Certified</h4>
-                    <p class="text-gray-400">Meeting the highest national quality standards.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUOTE FORM SECTION -->
-    <section id="quote" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
-                <div class="lg:w-2/5 bg-gray-900 p-10 text-white">
-                    <h2 class="text-3xl font-bold mb-6">Get a Quote</h2>
-                    <p class="text-gray-400 mb-8">Ready to build with SUTPLY? Fill the form and our team will contact you within 24 hours.</p>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-phone-alt text-red-600"></i>
-                            <span class="font-bold">+91 74900 80018</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <i class="fas fa-envelope text-red-600"></i>
-                            <span class="font-bold">sutply.in@gmail.com</span>
-                        </div>
-                    </div>
-                    <div class="mt-20 border-t border-gray-800 pt-8">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Make_in_India_logo.png" class="h-12 brightness-0 invert opacity-50" alt="Make in India">
-                    </div>
-                </div>
-                <div class="lg:w-3/5 p-10">
-                    <form id="quote-form" method="POST" action="/api/quote/" class="space-y-4">
-                        {% csrf_token %}
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="Full Name *" required class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-600 outline-none">
-                            <input type="tel" name="phone" placeholder="Phone Number *" required class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-600 outline-none">
-                        </div>
-                        <input type="email" name="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-600 outline-none">
-                        <select name="project_type" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-600 outline-none bg-white">
-                            <option value="Residential">Residential Project</option>
-                            <option value="Commercial">Commercial Project</option>
-                            <option value="Designer">Interior Designer / Architect</option>
-                        </select>
-                        <textarea name="message" rows="4" placeholder="Your requirements..." class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-red-600 outline-none"></textarea>
-                        <button type="submit" class="w-full bg-red-600 text-white font-bold py-4 rounded-lg hover:bg-red-700 transition-all shadow-lg">SEND REQUEST</button>
-                    </form>
-                    <div id="form-success" class="hidden text-center py-10 animate-fadeIn">
-                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-check"></i></div>
-                        <h3 class="text-xl font-bold">Request Sent!</h3>
-                        <p class="text-gray-600">We'll get back to you soon.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-950 text-white py-12">
-        <div class="container mx-auto px-4 text-center">
-            <div class="font-bold text-2xl mb-4">SUTPLY</div>
-            <p class="text-gray-500 mb-8">© 2024 SUTPLY. Premium Wood Solutions.</p>
-            <div class="flex justify-center space-x-6 text-xl">
-                <a href="#" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-red-500"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCROLL TO TOP -->
-    <button id="to-top" class="hidden fixed bottom-8 right-8 w-12 h-12 bg-red-600 text-white rounded-full shadow-2xl z-50 flex items-center justify-center hover:scale-110 transition-all">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- SCRIPTS -->
-    <script>
-        // HEADER SCROLL LOGIC
-        const header = document.getElementById('main-header');
-        const logoBox = document.getElementById('logo-box');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const toTopBtn = document.getElementById('to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('bg-white', 'shadow-md', 'py-2');
-                header.classList.remove('bg-transparent', 'py-4');
-                logoBox.classList.add('border-black');
-                navLinks.forEach(l => l.classList.replace('text-white', 'text-gray-800'));
-                mobileBtn.classList.replace('text-white', 'text-gray-800');
-                toTopBtn.classList.remove('hidden');
-            } else {
-                header.classList.remove('bg-white', 'shadow-md', 'py-2');
-                header.classList.add('bg-transparent', 'py-4');
-                logoBox.classList.remove('border-black');
-                navLinks.forEach(l => l.classList.replace('text-gray-800', 'text-white'));
-                mobileBtn.classList.replace('text-gray-800', 'text-white');
-                toTopBtn.classList.add('hidden');
-            }
-        });
-
-        // MOBILE MENU
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
-
-        // PRODUCT SLIDER
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-
-        function updateSlider() {
-            slides.forEach((s, i) => {
-                s.style.opacity = (i === currentSlide) ? '1' : '0';
-                s.style.zIndex = (i === currentSlide) ? '10' : '0';
-            });
-            dots.forEach((d, i) => {
-                i === currentSlide ? d.classList.add('active') : d.classList.remove('active');
-            });
-        }
-
-        window.changeSlide = (dir) => {
-            currentSlide = (currentSlide + dir + slides.length) % slides.length;
-            updateSlider();
-        };
-
-        window.setSlide = (idx) => {
-            currentSlide = idx;
-            updateSlider();
-        };
-
-        setInterval(() => changeSlide(1), 5000);
-
-        // FORM SUBMISSION (AJAX)
-        const form = document.getElementById('quote-form');
-        const success = document.getElementById('form-success');
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> SENDING...';
-            btn.disabled = true;
-
-            const formData = new FormData(form);
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                });
-                if (response.ok) {
-                    form.classList.add('hidden');
-                    success.classList.remove('hidden');
-                } else {
-                    // Fallback for preview
-                    form.classList.add('hidden');
-                    success.classList.remove('hidden');
-                }
-            } catch (err) {
-                // Fallback for preview
-                form.classList.add('hidden');
-                success.classList.remove('hidden');
-            }
-        });
-
-        // TO TOP
-        toTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+    <!-- ===== SEO ===== -->
+    <title>SUTPLY | Plywood | Surat, Gujarat – Termite Proof, Boiling Water Resistant</title>
+    <meta name="description" content="SUTPLY offers premium IS:CML certified plywood in Surat, Gujarat. Termite proof, borer proof, boiling water resistant. 20+ years of trust. Get a free quote today!">
+    <meta name="keywords" content="SUTPLY, plywood Surat, premium plywood Gujarat, termite proof plywood, borer proof plywood, Gurjun plywood, marine plywood, IS:CML plywood, interior plywood, Shree Umiya Traders">
+    <meta name="author" content="SUTPLY - Shree Umiya Traders">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sutply.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sutply.com/">
+    <meta property="og:title" content="SUTPLY | #1 Premium Plywood – Make Interiors Better">
+    <meta property="og:description" content="Premium IS:CML certified plywood from Surat. Termite proof, boiling water resistant, borer proof. 20+ years of trust.">
+    <meta property="og:image" content="{% static 'img/sutplyplogo1.png' %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"LocalBusiness","name":"SUTPLY – Shree Umiya Traders","telephone":"+91-7490080018","email":"sutply.in@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Athwa","addressLocality":"Surat","addressRegion":"Gujarat","addressCountry":"IN"},"openingHours":"Mo-Fr 09:00-19:30","url":"https://www.sutply.in"}
     </script>
+
+    <link href="{% static 'img/sutplylogo.png' %}" rel="icon" type="image/x-icon"  >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ── BASE ── */
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: #f0f9ff; color: #1e293b; overflow-x: hidden; margin: 0; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+        section { scroll-margin-top: 72px; }
+        img { max-width: 100%; height: auto; }
+
+        /* ── COLOURS ── */
+        :root {
+            --sky: #0ea5e9;
+            --sky-dk: #0284c7;
+            --sky-lt: #e0f2fe;
+            --navy: #0c2340;
+        }
+
+        /* ── NAVBAR ── */
+        #main-header { transition: background 0.3s, box-shadow 0.3s; }
+        #main-header.scrolled { background: #fff !important; box-shadow: 0 4px 20px rgba(14,165,233,.13); }
+        #main-header.scrolled .nav-link  { color: var(--navy) !important; }
+        #main-header.scrolled .nav-link:hover { color: var(--sky) !important; }
+        #main-header.scrolled #mob-btn   { color: var(--navy) !important; }
+        #main-header.scrolled #nav-cta   { background: linear-gradient(135deg,var(--sky),var(--sky-dk)); }
+
+        /* ── HERO ── */
+        .hero-wrap {
+            background: linear-gradient(135deg, var(--navy) 0%, #0c4a6e 55%, #075985 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero-wrap::before {
+            content: '';
+            position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(circle at 20% 30%, rgba(14,165,233,.18) 0%, transparent 55%),
+                        radial-gradient(circle at 80% 70%, rgba(245,158,11,.1) 0%, transparent 55%);
+        }
+
+        /* ── BUTTONS ── */
+        .btn-sky {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: linear-gradient(135deg, var(--sky), var(--sky-dk));
+            color: #fff; font-weight: 700; border-radius: .5rem;
+            transition: transform .2s, box-shadow .2s;
+            border: none; cursor: pointer; text-decoration: none;
+        }
+        .btn-sky:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,165,233,.38); }
+        .btn-ghost {
+            display: inline-flex; align-items: center; gap: .5rem;
+            background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.28);
+            color: #fff; font-weight: 600; border-radius: .5rem;
+            transition: background .2s; text-decoration: none;
+        }
+        .btn-ghost:hover { background: rgba(255,255,255,.22); }
+
+        /* ── FEATURE CARD ── */
+        .feat-card {
+            background: #fff; border: 1.5px solid #bae6fd; border-radius: 1rem;
+            transition: transform .3s, border-color .3s, box-shadow .3s;
+        }
+        .feat-card:hover { transform: translateY(-6px); border-color: var(--sky); box-shadow: 0 20px 40px rgba(14,165,233,.14); }
+        .feat-icon {
+            width: 52px; height: 52px; border-radius: .75rem; display: flex;
+            align-items: center; justify-content: center; font-size: 1.3rem;
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd); color: var(--sky-dk);
+            flex-shrink: 0; margin-bottom: 1rem;
+        }
+
+        /* ── SLIDER ── */
+        .slide { position: absolute; inset: 0; transition: opacity .7s ease; }
+        .dot   { transition: all .3s ease; }
+        .dot.active { background-color: var(--sky) !important; width: 2rem; }
+
+        /* ── FORM INPUTS ── */
+        .finput {
+            width: 100%; padding: .75rem 1rem;
+            border: 1.5px solid #bae6fd; border-radius: .5rem;
+            outline: none; transition: border-color .2s, box-shadow .2s;
+            background: #f8fafc; font-family: 'DM Sans', sans-serif;
+            font-size: 1rem; color: #1e293b;
+            -webkit-appearance: none; appearance: none;
+        }
+        .finput:focus { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(14,165,233,.14); }
+
+        /* ── POPUP ──
+           KEY FIX: Use visibility+opacity NOT display:none, so Tailwind's
+           purge/JIT cannot override the overlay flex layout.             */
+        #pop-overlay {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(12,35,64,.7);
+            backdrop-filter: blur(5px);
+            display: flex; align-items: center; justify-content: center;
+            padding: 1rem;
+            visibility: hidden; opacity: 0;
+            transition: opacity .35s ease, visibility .35s ease;
+            pointer-events: none;
+        }
+        #pop-overlay.pop-show {
+            visibility: visible; opacity: 1; pointer-events: auto;
+        }
+        #pop-card {
+            background: #fff; border-radius: 1.5rem; overflow: hidden;
+            width: 100%; max-width: 440px;
+            transform: translateY(28px);
+            transition: transform .38s ease;
+            box-shadow: 0 32px 64px rgba(12,35,64,.35);
+        }
+        #pop-overlay.pop-show #pop-card { transform: translateY(0); }
+
+        /* ── MOBILE SPECIFIC ── */
+        @media (max-width: 640px) {
+            .hero-h1 { font-size: clamp(1.9rem, 9vw, 3rem) !important; }
+            .hero-sub { font-size: .95rem !important; }
+            .quote-wrap { flex-direction: column !important; }
+            .about-img { height: 220px !important; object-fit: cover; }
+            .slider-wrap { aspect-ratio: 4/3 !important; }
+        }
+        #main-header img {
+            filter: brightness(0) invert(1);
+        }
+
+        #main-header.scrolled img {
+            filter: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<header id="main-header" class="fixed w-full z-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-3">
+        <a href="#home" class="flex-shrink-0">
+            <img src="{% static 'img/sutplylogo1.png' %}" style="height:42px;" alt="SUTPLY">
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-7">
+            <a href="#home"     class="nav-link font-semibold text-white hover:text-sky-300 transition-colors">Home</a>
+            <a href="#about"    class="nav-link font-semibold text-white hover:text-sky-300 transition-colors">About</a>
+            <a href="#products" class="nav-link font-semibold text-white hover:text-sky-300 transition-colors">Products</a>
+            <a href="#features" class="nav-link font-semibold text-white hover:text-sky-300 transition-colors">Features</a>
+            <a href="#quote"    class="nav-link font-semibold text-white hover:text-sky-300 transition-colors">Get Quote</a>
+        </nav>
+
+        <a id="nav-cta" href="#quote" class="btn-sky px-4 py-2 text-sm hidden md:inline-flex">
+            QUICK QUOTE <i class="fas fa-paper-plane text-xs"></i>
+        </a>
+
+        <button id="mob-btn" class="lg:hidden text-white text-2xl leading-none focus:outline-none" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mob-menu" class="hidden lg:hidden bg-white shadow-xl border-t border-sky-100">
+        <nav class="flex flex-col px-5 py-3 gap-0">
+            <a href="#home"     class="mob-link font-bold text-gray-800 py-3 border-b border-gray-100 text-base block">Home</a>
+            <a href="#about"    class="mob-link font-bold text-gray-800 py-3 border-b border-gray-100 text-base block">About</a>
+            <a href="#products" class="mob-link font-bold text-gray-800 py-3 border-b border-gray-100 text-base block">Products</a>
+            <a href="#features" class="mob-link font-bold text-gray-800 py-3 border-b border-gray-100 text-base block">Features</a>
+            <a href="#quote"    class="mob-link font-bold text-sky-600   py-3 text-base block">Get Quote →</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ═══════ HERO ═══════ -->
+<!--<section id="home" class="hero-wrap min-h-screen flex items-center pt-20 pb-14" background=""> -->
+    <section id="home"
+        class="hero-wrap min-h-screen flex items-center pt-20 pb-14 bg-cover bg-center bg-no-repeat relative"
+        style="background-image: url('https://r2-us-west.interiorai.com/1706788629-84a27832c90910af46621034b3df27f0-4.png');">
+
+        <div class="absolute inset-0 bg-black/40" style="opacity 50%;"></div>
+    <div class="absolute top-20 right-6  w-56 h-56 bg-sky-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-14 left-4 w-72 h-72 bg-amber-400/8  rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 relative z-10 text-white w-full">
+        <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 text-sky-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-5 uppercase tracking-wider">
+                <i class="fas fa-award text-amber-400"></i> #Recommended by Architects
+            </div>
+            <h1 class="hero-h1 text-5xl md:text-6xl lg:text-7xl font-black mb-5 text-white">
+                BEAUTIFY YOUR<br>HOME WITH<br>
+                <span class="text-sky-400">SUTPLY</span>
+            </h1>
+            <p class="hero-sub text-base md:text-xl mb-8 text-sky-100 leading-relaxed max-w-lg">
+                The Excellent Plywood — Make Interiors Better. 30+ years of trust in premium, IS:CML certified plywood solutions.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-10">
+                <a href="#quote"    class="btn-sky px-7 py-3.5 text-sm md:text-base">Free Consultation <i class="fas fa-arrow-right text-xs"></i></a>
+                <a href="#features" class="btn-ghost px-7 py-3.5 text-sm md:text-base">Our Features</a>
+            </div>
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 border-t border-white/10">
+                <span class="flex items-center gap-1.5 text-sky-200 text-xs md:text-sm"><i class="fas fa-shield-alt text-sky-400"></i>Termite Proof</span>
+                <span class="flex items-center gap-1.5 text-sky-200 text-xs md:text-sm"><i class="fas fa-tint-slash text-sky-400"></i>Boiling Water Resistant</span>
+                <span class="flex items-center gap-1.5 text-sky-200 text-xs md:text-sm"><i class="fas fa-certificate text-amber-400"></i>IS:CML Certified</span>
+                <span class="flex items-center gap-1.5 text-sky-200 text-xs md:text-sm"><i class="fas fa-leaf text-green-400"></i>Eco Friendly</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 pointer-events-none">
+        <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;">
+            <path d="M0,36 C480,72 960,0 1440,36 L1440,56 L0,56 Z" fill="#f0f9ff"/>
+        </svg>
+    </div>
+</section>
+
+
+<!-- ═══════ STATS ═══════ -->
+<section class="py-10 bg-sky-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="bg-gradient-to-br from-sky-100 to-sky-50 border border-sky-200 rounded-xl text-center py-6 px-3">
+                <div class="text-3xl md:text-4xl font-black text-sky-600 mb-1" style="font-family:'Playfair Display',serif;">30+</div>
+                <div class="text-gray-600 font-medium text-xs md:text-sm">Years of Trust</div>
+            </div>
+            <div class="bg-gradient-to-br from-sky-100 to-sky-50 border border-sky-200 rounded-xl text-center py-6 px-3">
+                <div class="text-3xl md:text-4xl font-black text-sky-600 mb-1" style="font-family:'Playfair Display',serif;">1200+</div>
+                <div class="text-gray-600 font-medium text-xs md:text-sm">Happy Clients</div>
+            </div>
+            <div class="bg-gradient-to-br from-sky-100 to-sky-50 border border-sky-200 rounded-xl text-center py-6 px-3">
+                <div class="text-3xl md:text-4xl font-black text-sky-600 mb-1" style="font-family:'Playfair Display',serif;"># TOP</div>
+                <div class="text-gray-600 font-medium text-xs md:text-sm">By Architects</div>
+            </div>
+            <div class="bg-gradient-to-br from-sky-100 to-sky-50 border border-sky-200 rounded-xl text-center py-6 px-3">
+                <div class="text-2xl md:text-3xl font-black text-sky-600 mb-1" style="font-family:'Playfair Display',serif;">IS:CML</div>
+                <div class="text-gray-600 font-medium text-xs md:text-sm">Certified Quality</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about"  class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+            <div class="w-full lg:w-1/2 relative mb-10 lg:mb-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="{% static 'img/about.webp' %}"
+                         alt="SUTPLY Craftsmanship" class="about-img w-full h-72 md:h-auto object-cover">
+                </div>
+                <div class="absolute -bottom-5 -right-3 md:-bottom-6 md:-right-6 text-white p-5 md:p-8 rounded-2xl shadow-2xl"
+                     style="background:linear-gradient(135deg,#0ea5e9,#0284c7);">
+                    <div class="text-3xl md:text-5xl font-black" style="font-family:'Playfair Display',serif;">30+</div>
+                    <div class="text-xs md:text-sm font-semibold uppercase tracking-widest">Years of Trust</div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <p class="text-sky-600 font-bold uppercase tracking-widest text-xs md:text-sm mb-3 flex items-center gap-2">
+                    <span class="inline-block w-8 h-0.5 bg-sky-500"></span>Our Legacy
+                </p>
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-5">Trust &amp; Strength Combined</h2>
+                <p class="text-gray-600 text-base leading-relaxed mb-5">
+                    At <strong>SUTPLY</strong>, we believe superior quality plywood is the heart of every great interior. Based in Surat, Gujarat, we supply premium solutions that ensure your projects stand the test of time.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                    <div class="flex items-center gap-2.5 p-3 bg-sky-50 rounded-lg"><i class="fas fa-check-circle text-sky-600 text-sm"></i><span class="font-semibold text-sm">100% Gurjun Face</span></div>
+                    <div class="flex items-center gap-2.5 p-3 bg-sky-50 rounded-lg"><i class="fas fa-check-circle text-sky-600 text-sm"></i><span class="font-semibold text-sm">Interior Focused</span></div>
+                    <div class="flex items-center gap-2.5 p-3 bg-sky-50 rounded-lg"><i class="fas fa-check-circle text-sky-600 text-sm"></i><span class="font-semibold text-sm">Optimum Thickness</span></div>
+                    <div class="flex items-center gap-2.5 p-3 bg-sky-50 rounded-lg"><i class="fas fa-check-circle text-sky-600 text-sm"></i><span class="font-semibold text-sm">Nail Holding Capacity</span></div>
+                </div>
+                <blockquote class="p-4 border-l-4 border-sky-500 bg-sky-50 rounded-r-xl italic text-gray-700 text-sm mb-6">
+                    "Unlock the potential of your projects with Trusty Plywood. We bring the beauty of Gurjun inside your living space."
+                </blockquote>
+                <a href="#quote" class="btn-sky px-7 py-3 text-sm">Get Free Quote <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4">
+    <div class="border-t border-gray-200 my-12"></div>
+</div>
+<!-- ═══════ FEATURED PRODUCT IMAGE ═══════ -->
+
+<section id="products" class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- LEFT: Product Image -->
+            <div class="flex justify-center">
+                <img src="{% static 'img/sutply_product.png' %}" 
+                     alt="SUTPLY Plywood"
+                     class="max-h-[420px] object-contain drop-shadow-2xl hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div>
+                <p class="text-sky-600 font-bold uppercase tracking-widest text-sm mb-3">
+                    — Featured Product —
+                </p>
+
+                <h2 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+                    Strong. Durable. <br>
+                    <span class="text-red-600">SUTPLY Plywood</span>
+                </h2>
+
+                <p class="text-gray-600 text-base md:text-lg mb-6">
+                    Built for modern interiors, SUTPLY plywood delivers unmatched strength and finish.
+                    Ideal for furniture, kitchens, and heavy-duty applications.
+                </p>
+
+                <!-- Features -->
+                <div class="space-y-3 mb-6">
+                    <p class="flex items-center text-gray-700">
+                        ✅ 100% Gurjun Face
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        ✅ Borer & Powder Free
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        ✅ Full Core Full Panel
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════ PRODUCT SLIDER ═══════ -->
+<section id="products1" class="py-16 md:py-20 bg-sky-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-10">
+            <p class="text-sky-600 font-bold uppercase tracking-widest text-xs md:text-sm mb-3">— Showcase —</p>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900">Plywood For Every Need</h2>
+        </div>
+
+        <div class="slider-wrap relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-black"
+             style="aspect-ratio:16/8; min-height:180px;">
+            <div class="slide opacity-100 z-10">
+                <img src="{% static 'img/marine_grade.jpg' %}" 
+                     class="w-full h-full object-cover opacity-60" alt="Marine Grade">
+                <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+                    <h3 class="text-xl md:text-5xl font-black mb-2">Marine Grade</h3>
+                    <p class="text-xs md:text-xl text-gray-200 max-w-xs md:max-w-lg">Perfect for kitchen cabinets and moisture-prone areas.</p>
+                </div>
+            </div>
+            <div class="slide opacity-0">
+                <img src="{% static 'img/slider1.avif' %}"
+                     class="w-full h-full object-cover opacity-60" alt="Premium Finish">
+                <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+                    <h3 class="text-xl md:text-5xl font-black mb-2">Premium Finish</h3>
+                    <p class="text-xs md:text-xl text-gray-200 max-w-xs md:max-w-lg">100% Gurjun face for flawless architectural results.</p>
+                </div>
+            </div>
+            <div class="slide opacity-0">
+                 <img src="{% static 'img/durable_soution.webp' %}"
+                     class="w-full h-full object-cover opacity-60" alt="Durable Solutions">
+                <div class="absolute inset-0 flex flex-col justify-center px-6 md:px-16 text-white">
+                    <h3 class="text-xl md:text-5xl font-black mb-2">Durable Solutions</h3>
+                    <p class="text-xs md:text-xl text-gray-200 max-w-xs md:max-w-lg">Borer &amp; Powder free sheets for lifetime protection.</p>
+                </div>
+            </div>
+
+            <button onclick="changeSlide(-1)"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-full text-white transition-all"
+                    style="background:rgba(255,255,255,.2);"
+                    onmouseover="this.style.background='#0284c7'" onmouseout="this.style.background='rgba(255,255,255,.2)'">
+                <i class="fas fa-chevron-left text-sm"></i>
+            </button>
+            <button onclick="changeSlide(1)"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-full text-white transition-all"
+                    style="background:rgba(255,255,255,.2);"
+                    onmouseover="this.style.background='#0284c7'" onmouseout="this.style.background='rgba(255,255,255,.2)'">
+                <i class="fas fa-chevron-right text-sm"></i>
+            </button>
+
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+                <button onclick="setSlide(0)" class="dot w-3 h-3 bg-white/50 rounded-full active"></button>
+                <button onclick="setSlide(1)" class="dot w-3 h-3 bg-white/50 rounded-full"></button>
+                <button onclick="setSlide(2)" class="dot w-3 h-3 bg-white/50 rounded-full"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4">
+    <div class="border-t border-gray-200 my-12"></div>
+</div>
+
+
+
+<!-- ═══════ FEATURES ═══════ -->
+<section id="features" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-10 md:mb-14">
+            <p class="text-sky-600 font-bold uppercase tracking-widest text-xs md:text-sm mb-3">— Specifications —</p>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900">Built To Last Generations</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-temperature-high"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">100°C Boiling Water Resistant</h4>
+                <p class="text-gray-500 text-sm">Withstands extreme moisture — ideal for kitchens and humid environments.</p>
+            </div>
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-bug"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">Termite Proof</h4>
+                <p class="text-gray-500 text-sm">Advanced chemical treatment ensures complete termite and pest protection.</p>
+            </div>
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-shield-virus"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">Borer Proof</h4>
+                <p class="text-gray-500 text-sm">Scientifically treated to resist borer infestation for decades.</p>
+            </div>
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-ruler-combined"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">Optimum Thickness</h4>
+                <p class="text-gray-500 text-sm">Calibrated thickness for maximum strength without unnecessary weight.</p>
+            </div>
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-leaf"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">Environment Friendly</h4>
+                <p class="text-gray-500 text-sm">Eco-conscious manufacturing with responsibly sourced timber.</p>
+            </div>
+            <div class="feat-card p-6">
+                <div class="feat-icon"><i class="fas fa-thumbtack"></i></div>
+                <h4 class="text-base md:text-lg font-bold mb-2">Nail Holding Capacity</h4>
+                <p class="text-gray-500 text-sm">Superior grip strength for furniture and construction applications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4">
+    <div class="border-t border-gray-200 my-12"></div>
+</div>
+<!-- ═══════ QUOTE FORM ═══════ -->
+<section id="quote" class="py-16 md:py-20 bg-sky-50">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="quote-wrap bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+
+            <div class="w-full lg:w-2/5 p-7 md:p-10 text-white"
+                 style="background:linear-gradient(160deg,var(--navy),#0c4a6e);">
+                <h2 class="text-2xl md:text-3xl font-black mb-3">Get a Free Quote</h2>
+                <p class="text-sky-200 mb-6 text-sm">Ready to build with SUTPLY? Fill the form and our team will contact you within 24 hours.</p>
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-center gap-3 bg-white/10 rounded-lg px-3 py-2.5"><i class="fas fa-phone-alt text-sky-300 w-4"></i><span class="font-semibold">+91 74900 80018</span></div>
+                    <div class="flex items-center gap-3 bg-white/10 rounded-lg px-3 py-2.5"><i class="fas fa-envelope text-sky-300 w-4"></i><span class="font-semibold">sutply.in@gmail.com</span></div>
+                    <div class="flex items-center gap-3 bg-white/10 rounded-lg px-3 py-2.5"><i class="fas fa-map-marker-alt text-sky-300 w-4"></i><span class="font-semibold">Athwa, Surat, Gujarat</span></div>
+                    <div class="flex items-center gap-3 bg-white/10 rounded-lg px-3 py-2.5"><i class="fas fa-clock text-sky-300 w-4"></i><span class="font-semibold">Mon–Fri: 9 AM – 7:30 PM</span></div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-3/5 p-6 md:p-10">
+                <form id="quote-form" method="POST" action="/api/quote/" class="space-y-3">
+                    {% csrf_token %}
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="text"  name="name"  placeholder="Full Name *"    required class="finput">
+                        <input type="tel"   name="phone" placeholder="Phone Number *" required class="finput">
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address (optional)" class="finput">
+                    <select name="project_type" class="finput" style="background:#f8fafc;">
+                        <option value="">Select Project Type</option>
+                        <option value="Residential">Residential Project</option>
+                        <option value="Commercial">Commercial Project</option>
+                        <option value="Designer">Interior Designer / Architect</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <textarea name="message" rows="4" placeholder="Your requirements..." class="finput" style="resize:none;"></textarea>
+                    <button type="submit" class="btn-sky w-full py-3.5 text-sm justify-center">
+                        SEND REQUEST <i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+                <div id="form-success" style="display:none;" class="text-center py-10">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Request Sent!</h3>
+                    <p class="text-gray-500 mt-2 text-sm">We'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer style="background:var(--navy);" class="py-12 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            <div class="sm:col-span-2">
+                <img src="{% static 'img/sutplylogo1.png' %}"
+                     style="height:34px;filter:brightness(0) invert(1);opacity:.8;" alt="SUTPLY" class="mb-4">
+                <p class="text-sky-200 text-sm leading-relaxed mb-5">The Excellent Plywood — Make Interiors Better. Premium IS:CML certified plywood for residential and commercial projects across Gujarat.</p>
+                <div class="flex gap-2">
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-sky-500 rounded-full flex items-center justify-center transition-all"><i class="fab fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-sky-500 rounded-full flex items-center justify-center transition-all"><i class="fab fa-instagram text-sm"></i></a>
+                    <a href="#" class="w-9 h-9 bg-white/10 hover:bg-sky-500 rounded-full flex items-center justify-center transition-all"><i class="fab fa-linkedin-in text-sm"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4 text-xs uppercase tracking-wider">Quick Links</h4>
+                <div class="space-y-2">
+                    <div><a href="#home"     class="text-sky-300 hover:text-white text-sm transition-colors">Home</a></div>
+                    <div><a href="#about"    class="text-sky-300 hover:text-white text-sm transition-colors">About Us</a></div>
+                    <div><a href="#products" class="text-sky-300 hover:text-white text-sm transition-colors">Products</a></div>
+                    <div><a href="#features" class="text-sky-300 hover:text-white text-sm transition-colors">Features</a></div>
+                    <div><a href="#quote"    class="text-sky-300 hover:text-white text-sm transition-colors">Get Quote</a></div>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4 text-xs uppercase tracking-wider">Contact</h4>
+                <div class="space-y-2 text-sky-300 text-sm">
+                    <div><i class="fas fa-map-marker-alt mr-2 w-4"></i>Athwa, Surat, Gujarat</div>
+                    <div><i class="fas fa-phone mr-2 w-4"></i>+91 74900 80018</div>
+                    <div><i class="fas fa-envelope mr-2 w-4"></i>sutply.in@gmail.com</div>
+                    <div><i class="fas fa-clock mr-2 w-4"></i>Mon–Fri: 9 AM – 7:30 PM</div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sky-400 text-xs text-center sm:text-left">
+            <span>&copy; 2024 SUTPLY – Shree Umiya Traders. All Rights Reserved.</span>
+            <span>Designed with <i class="fas fa-heart"></i> in Surat, Gujarat</span>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ═══════ SCROLL TO TOP ═══════ -->
+<button id="to-top"
+        style="display:none;position:fixed;bottom:1.5rem;right:1.25rem;width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--sky),var(--sky-dk));color:#fff;box-shadow:0 8px 24px rgba(14,165,233,.4);cursor:pointer;z-index:9000;align-items:center;justify-content:center;font-size:.875rem;"
+        aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- ═══════ POPUP INQUIRY MODAL ═══════
+     IMPORTANT: uses visibility/opacity toggle — NOT display toggle.
+     This prevents any CSS framework from resetting the flex layout.
+═══════════════════════════════════════ -->
+<div id="pop-overlay" role="dialog" aria-modal="true" aria-label="Quick Inquiry">
+    <div id="pop-card">
+
+        <!-- Header bar -->
+        <div style="background:linear-gradient(135deg,#0284c7,#0c2340);padding:1.2rem 1.4rem;position:relative;color:#fff;">
+            <button id="pop-close" aria-label="Close"
+                    style="position:absolute;top:10px;right:10px;width:30px;height:30px;background:rgba(255,255,255,.2);border:none;border-radius:50%;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;line-height:1;">
+                <i class="fas fa-times"></i>
+            </button>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;">
+                <div style="width:38px;height:38px;background:#f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <i class="fas fa-comment-dots" style="color:#fff;font-size:14px;"></i>
+                </div>
+                <div>
+                    <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;line-height:1.2;">Quick Inquiry</div>
+                    <div style="font-size:.72rem;color:#bae6fd;">We respond within 24 hours!</div>
+                </div>
+            </div>
+            <p style="font-size:.8rem;color:#e0f2fe;margin:0;">🎉 Get a <strong>FREE consultation</strong> on your next plywood project!</p>
+        </div>
+
+        <!-- Form area -->
+        <div style="padding:1.1rem 1.4rem 1.4rem;">
+            <form id="pop-form" method="POST" action="/api/quote/">
+                {% csrf_token %}
+                <input type="hidden" name="source" value="popup">
+                <div style="display:flex;flex-direction:column;gap:.6rem;">
+                    <input type="text"  name="name"    placeholder="Your Name *"           required class="finput" style="font-size:.88rem;padding:.65rem .9rem;">
+                    <input type="tel"   name="phone"   placeholder="Phone Number *"         required class="finput" style="font-size:.88rem;padding:.65rem .9rem;">
+                    <input type="email" name="email"   placeholder="Email (optional)"                class="finput" style="font-size:.88rem;padding:.65rem .9rem;">
+                    <textarea          name="message"  placeholder="Tell us about your project..." rows="3"
+                              class="finput" style="font-size:.88rem;padding:.65rem .9rem;resize:none;"></textarea>
+                    <button type="submit" class="btn-sky justify-center"
+                            style="width:100%;padding:.8rem;font-size:.88rem;border-radius:.5rem;">
+                        SEND INQUIRY &nbsp;<i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div id="pop-success" style="display:none;text-align:center;padding:1.5rem 0 .5rem;">
+                <i class="fas fa-check-circle" style="font-size:2.2rem;color:var(--sky);display:block;margin-bottom:.6rem;"></i>
+                <p style="font-weight:700;color:#1e293b;margin:0;font-size:.95rem;">Thank you! We'll contact you soon.</p>
+            </div>
+
+            <p style="text-align:center;margin-top:.75rem;margin-bottom:0;">
+                <button id="pop-dismiss"
+                        style="background:none;border:none;font-size:.76rem;color:#94a3b8;cursor:pointer;text-decoration:underline;">
+                    No thanks, I'll browse later
+                </button>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- ═══════ SCRIPTS ═══════ -->
+<script>
+/* ── NAVBAR ── */
+const hdr = document.getElementById('main-header');
+window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── MOBILE MENU ── */
+const mobBtn  = document.getElementById('mob-btn');
+const mobMenu = document.getElementById('mob-menu');
+mobBtn.addEventListener('click', () => mobMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mob-link').forEach(l =>
+    l.addEventListener('click', () => mobMenu.classList.add('hidden'))
+);
+
+/* ── PRODUCT SLIDER ── */
+let cur = 0;
+const slides = document.querySelectorAll('.slide');
+const dots   = document.querySelectorAll('.dot');
+
+function goSlide(n) {
+    slides[cur].style.opacity = '0';
+    slides[cur].style.zIndex  = '0';
+    dots[cur].classList.remove('active');
+    cur = ((n % slides.length) + slides.length) % slides.length;
+    slides[cur].style.opacity = '1';
+    slides[cur].style.zIndex  = '10';
+    dots[cur].classList.add('active');
+}
+window.changeSlide = d => goSlide(cur + d);
+window.setSlide    = n => goSlide(n);
+setInterval(() => changeSlide(1), 5000);
+
+/* ── MAIN QUOTE FORM ── */
+document.getElementById('quote-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type=submit]');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Sending…';
+    btn.disabled = true;
+    try { await fetch(this.action, { method: 'POST', body: new FormData(this) }); } catch(_) {}
+    this.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+});
+
+/* ── POPUP OPEN / CLOSE ── */
+const popOverlay = document.getElementById('pop-overlay');
+
+function openPopup() {
+    if (sessionStorage.getItem('popSeen')) return;
+    popOverlay.classList.add('pop-show');
+    sessionStorage.setItem('popSeen', '1');
+    document.body.style.overflow = 'hidden';   // prevent background scroll
+}
+function closePopup() {
+    popOverlay.classList.remove('pop-show');
+    document.body.style.overflow = '';
+}
+
+// Show after 8 seconds
+setTimeout(openPopup, 8000);
+
+// Close triggers
+document.getElementById('pop-close').addEventListener('click', closePopup);
+document.getElementById('pop-dismiss').addEventListener('click', closePopup);
+popOverlay.addEventListener('click', e => { if (e.target === popOverlay) closePopup(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+
+/* ── POPUP FORM SUBMIT ── */
+document.getElementById('pop-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type=submit]');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Sending…';
+    btn.disabled  = true;
+    try { await fetch(this.action, { method: 'POST', body: new FormData(this) }); } catch(_) {}
+    this.style.display = 'none';
+    document.getElementById('pop-success').style.display = 'block';
+    setTimeout(closePopup, 2800);
+});
+
+/* ── SCROLL TO TOP ── */
+const toTopBtn = document.getElementById('to-top');
+window.addEventListener('scroll', () => {
+    toTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+}, { passive: true });
+toTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
 </body>
 </html>
